@@ -7,13 +7,11 @@ import {
 } from "@/components/ui/card";
 import type { CardWrapperProps } from "./types";
 import { Brain } from "lucide-react";
-import { TooltipWrapper } from "../TooltipWrapper";
 
 export const CardWrapper = ({
   children,
   description,
   title,
-  writerText,
 }: CardWrapperProps) => {
   return (
     <Card className="w-full bg-white">
@@ -21,11 +19,9 @@ export const CardWrapper = ({
         <div className="w-full flex justify-between items-center">
           <CardTitle>{title}</CardTitle>
 
-          <TooltipWrapper text={writerText}>
-            <div className="rounded-xl p-2  bg-secondary ">
-              <Brain color="#5884d1" />
-            </div>
-          </TooltipWrapper>
+          <div className="rounded-xl p-2  bg-secondary ">
+            <Brain color="#5884d1" />
+          </div>
         </div>
 
         {description && <CardDescription>{description}</CardDescription>}

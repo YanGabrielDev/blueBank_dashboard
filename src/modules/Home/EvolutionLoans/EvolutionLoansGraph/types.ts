@@ -1,4 +1,4 @@
-import { EvolutionLoansData } from "@/services/EvolutionLoans/types";
+import { EvolutionLoansData } from "@/services/evolutionLoans/types";
 
 export interface EvolutionLoansGraphProps{
     data: EvolutionLoansData[]

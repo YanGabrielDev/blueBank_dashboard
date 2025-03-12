@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
-import { SummaryDisplayProps } from "./type";
+import { SummaryDisplayProps } from "./types";
 
 export default function SummaryDisplay({ text }: SummaryDisplayProps) {
   const [displayedText, setDisplayedText] = useState("");

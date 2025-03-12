@@ -1,21 +1,37 @@
 import React from "react";
 import { CardWrapper } from "../../../components/CardWrapper";
-import { getDistributionInvestments } from "@/services/distributionInvestments";
 import { DistributionInvestmentsGraph } from "./DistributionInvestmentsGraph";
+import { DistributionInvestmentsData } from "@/services/distributionInvestments/types";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import SummaryDisplay from "@/components/SummaryDisplay";
 
+type DistributionInvestmentsProps = {
+  data: DistributionInvestmentsData[];
+  summary: string;
+};
 
-export const DistributionInvestments = async () => {
-  const distributionInvestments = await getDistributionInvestments();
-
-
-  if (!distributionInvestments?.data && !distributionInvestments?.summary) {
-   return <span>Loading...</span>;
-  }
+export const DistributionInvestments = async ({
+  data,
+  summary,
+}: DistributionInvestmentsProps) => {
   return (
     <div className="flex-col col-span-12 sm:col-span-6 lg:col-span-6">
-        <CardWrapper title="Distribuição de Investimentos" writerText={distributionInvestments.summary.summary}>
-          <DistributionInvestmentsGraph data={distributionInvestments?.data} />
-        </CardWrapper>
-      </div>
+      <Dialog>
+        <DialogTrigger className="w-full">
+          <CardWrapper title="Distribuição de Investimentos">
+            <DistributionInvestmentsGraph data={data} />
+          </CardWrapper>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogTitle>Resumo inteligente</DialogTitle>
+          <SummaryDisplay text={summary} />
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 };

@@ -1,6 +1,6 @@
-import { CustomerGrowth } from "@/modules/Home/CustomerGrowth";
-import { DistributionInvestments } from "@/modules/Home/DistributionInvestments";
-import { EvolutionLoans } from "@/modules/Home/EvolutionLoans";
+import { CustomerGrowthContainer } from "./CustomerGrowthContainer";
+import { DistributionInvestmentsContainer } from "./DistributionInvestmentsContainer";
+import { EvolutionLoansContainer } from "./EvolutionLoansContainer";
 
 export default function Home() {
   return (
@@ -12,9 +12,9 @@ export default function Home() {
         </h2>
       </div>
       <div className="p-8 grid grid-cols-12 gap-4">
-        <CustomerGrowth />
-        <DistributionInvestments />
-        <EvolutionLoans />
+        <CustomerGrowthContainer />
+        <DistributionInvestmentsContainer />
+        <EvolutionLoansContainer />
       </div>
     </div>
   );

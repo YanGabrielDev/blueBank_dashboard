@@ -1,22 +1,33 @@
 import React from "react";
-import { CustomerGrowthGraph } from "./CustomerGrowthGraph";
 import { CardWrapper } from "../../../components/CardWrapper";
-import { getCustomerGrowth } from "@/services/customerGrowth";
+import { CustomerGrowthData } from "@/services/customerGrowth/types";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import SummaryDisplay from "@/components/SummaryDisplay";
+import { CustomerGrowthGraph } from "./CustomerGrowthGraph";
 
-export const CustomerGrowth = async () => {
-  const customerGrowth = await getCustomerGrowth();
-
-  if (!customerGrowth || (!customerGrowth.data && !customerGrowth.summary)) {
-    return <span>Loading...</span>;
-  }
-
-  const { data, summary } = customerGrowth;
-
+type CustomerGrowthProps = {
+  data: CustomerGrowthData[];
+  summary: string;
+};
+export const CustomerGrowth = ({ data, summary }: CustomerGrowthProps) => {
   return (
-      <div className="flex-col col-span-12 sm:col-span-6 lg:col-span-6">
-        <CardWrapper title="Crescimento de Clientes ao Longo do Tempo" writerText={summary.summary}>
-          <CustomerGrowthGraph data={data} />
-        </CardWrapper>
-      </div>
+    <div className="flex-col col-span-12 sm:col-span-6 lg:col-span-6">
+      <Dialog>
+        <DialogTrigger className="w-full">
+          <CardWrapper title="Crescimento de Clientes ao Longo do Tempo">
+            <CustomerGrowthGraph data={data} />
+          </CardWrapper>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogTitle>Resumo inteligente</DialogTitle>
+          <SummaryDisplay text={summary} />
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 };
