@@ -1,5 +1,5 @@
 import { EvolutionLoans } from "@/modules/Home/EvolutionLoans";
-import { getEvolutionLoans } from "@/services/evolutionLoans";
+import { getEvolutionLoans } from "../services/evolutionLoans";
 
 export const  EvolutionLoansContainer = async () => {
     const evolutionLoans = await getEvolutionLoans();
