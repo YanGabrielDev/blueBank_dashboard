@@ -1,6 +1,6 @@
 import { CardWrapper } from "@/components/CardWrapper";
 import { EvolutionLoansGraph } from "./EvolutionLoansGraph";
-import { EvolutionLoansData } from "@/services/evolutionLoans/types";
+import { EvolutionLoansData } from "@/services/evolution/types";
 import {
   Dialog,
   DialogContent,
