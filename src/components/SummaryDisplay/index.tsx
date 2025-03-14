@@ -4,7 +4,7 @@ import { SummaryDisplayProps } from "./types";
 
 export default function SummaryDisplay({ text }: SummaryDisplayProps) {
   const [displayedText, setDisplayedText] = useState("");
-  const typingSpeed = 20; // Velocidade da digitação (ms por letra)
+  const typingSpeed = 10; // Velocidade da digitação (ms por letra)
 
   useEffect(() => {
     setDisplayedText(""); // Resetar ao receber um novo summary
