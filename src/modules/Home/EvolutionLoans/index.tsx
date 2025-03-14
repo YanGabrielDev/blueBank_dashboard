@@ -21,8 +21,10 @@ export const EvolutionLoans = ({ data, summary }: EvolutionLoansProps) => {
             <EvolutionLoansGraph data={data} />
           </CardWrapper>
         </DialogTrigger>
-        <DialogContent>
-          <DialogTitle>Resumo inteligente</DialogTitle>
+        <DialogContent className="bg-background dark:bg-darkSecondaryBackground dark:border-darkSecondaryBackground">
+          <DialogTitle className="text-primaryText dark:text-darkPrimaryText">
+            Resumo inteligente
+          </DialogTitle>
           <SummaryDisplay text={summary} />
         </DialogContent>
       </Dialog>

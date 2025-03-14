@@ -27,6 +27,6 @@ export default function SummaryDisplay({ text }: SummaryDisplayProps) {
 
   return (
 
-    <p className=" whitespace-pre-wrap">{displayedText}</p>
+    <p className="text-sm whitespace-pre-wrap text-primaryText dark:text-darkSecondaryText">{displayedText}</p>
   );
 }

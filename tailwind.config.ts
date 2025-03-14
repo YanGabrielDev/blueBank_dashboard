@@ -12,10 +12,15 @@ export default {
   	extend: {
   		colors: {
   			background: '#f9fbfc',
+			darkBackground: "#131B2F",
+			darkSecondaryBackground: "#24304B",
   			foreground: 'hsl(var(--foreground))',
 			primaryText: "#37383a",
+			darkPrimaryText: "#f8fafc",
 			secondaryText: "#a5a6aa",
-			primary: "#5884d1",
+			darkSecondaryText: "#ededed",
+			darkSidebarBg: "#071026",
+			primary: "#0D92F4",
 
   			card: {
   				DEFAULT: 'hsl(var(--card))',

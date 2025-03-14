@@ -2,10 +2,10 @@ import { Package, Home, Settings, User } from "lucide-react";
 
 export const Sidebar = () => {
   return (
-    <aside className="bg-white h-screen px-4 fixed" aria-label="Sidebar de navegação">
+    <aside className="bg-white h-screen px-4 fixed dark:bg-darkSidebarBg" aria-label="Sidebar de navegação">
       <header className="flex items-center gap-4 px-4 py-8">
-        <Package color="#5884d1" size={24} />
-        <h3 className="font-semibold text-lg text-primaryText">BoxBank</h3>
+        <Package color="#0D92F4" size={24} />
+        <h3 className="font-semibold text-lg text-primaryText dark:text-darkPrimaryText">BoxBank</h3>
       </header>
       <nav>
         <ul className="">

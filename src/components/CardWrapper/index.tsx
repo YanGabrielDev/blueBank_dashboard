@@ -14,13 +14,13 @@ export const CardWrapper = ({
   title,
 }: CardWrapperProps) => {
   return (
-    <Card className="w-full bg-white">
+    <Card className="w-full bg-background hover:inset-shadow-lg hover:shadow-primary dark:bg-darkSecondaryBackground dark:border-darkSecondaryBackground">
       <CardHeader>
         <div className="w-full flex justify-between items-center">
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="text-primaryText dark:text-darkPrimaryText">{title}</CardTitle>
 
           <div className="rounded-xl p-2  bg-secondary ">
-            <Brain color="#5884d1" />
+            <Brain color="#0D92F4" />
           </div>
         </div>
 

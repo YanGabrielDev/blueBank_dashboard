@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body
-        className={`${poppinsSans.variable} antialiased`}
+        className={`${poppinsSans.variable} antialiased dark:bg-darkBackground`}
       >
         <div className="grid grid-cols-12 ">
           <div className="col-span-2">
